@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+	--primary: #303030;
+	--secondary: #424242;
+	--text: #fff;
+	--success: #81c784;
+	--error: #a6d4fa;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+}
+
+body {
+	background-color: var(--primary);
+}
+
+#dark-div {
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 999;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+}
+
+/* Style for Profile Component */
+
+#profile {
+	margin-top: 15vh;
+	width: 50%;
+	height: 50%;
+}
+
+.profile-card {
+	background-color: var(--text);
+	display: flex;
+	flex-direction: column;
+	margin: 5vh 5vw;
+	border-radius: 3%;
+	box-shadow: 0px 0px 8px 10px rgba(0, 0, 0, 1);
+}
+
+.avatar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.avatar img {
+	width: 50%;
+	border-radius: 100%;
+}
+
+.card-header,
+.card-content,
+.project-display {
+	display: flex;
+	flex-direction: column;
+	flex: 2 1 40%;
+	justify-content: center;
+	align-items: center;
+	margin: 1vh 1vw;
+}
+
+.content-text {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	color: var(--primary);
+	margin-bottom: 1vh;
+}
+
+#subtitle {
+	font-family: 'Rubik', sans-serif;
+	color: var(--secondary);
+}
+
+.technologies,
+.content-links,
+.project-stack,
+.project-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--secondary);
+	font-size: 1.5rem;
+}
+
+.technologies > *:hover,
+.content-links > * :hover,
+.project-links > *:hover,
+.project-stack > *:hover {
+	color: var(--success);
+}
+
+.content-links a,
+.project-links a {
+	color: var(--secondary);
+}
+
+.card-footer,
+.project-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 20%;
+	margin: 1vh 1vw;
+}
+
+/* Style for Projects Component  */
+
+#projects {
+	display: none;
+	justify-content: flex-end;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+
+.project-content {
+	display: flex;
+	background-color: var(--text);
+	width: 62vw;
+	height: 100vh;
+	flex-direction: column;
+}
+
+#projects-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1vh 1vw;
+	width: 95%;
+}
+
+.projects-list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	max-width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+.project-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 30%;
+	height: 28%;
+	border: solid 1px var(--secondary);
+	margin: 1vh 1vw;
+}
+
+.preview {
+	height: 10vh;
+	width: 100%;
+}
+
+.preview img {
+	width: 95%;
+}
+
+.project-display {
+	margin: 0 !important;
+}
+
+.project-text {
+	font-family: 'Rubik', sans-serif;
+	width: 90%;
+	height: 100%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.project-footer {
+	margin: 0;
+}
+
+.project-links {
+	justify-content: space-between;
+}
+
+#projects-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1vh 1vw;
+	width: 95%;
+}
+
+/* Style for Projects List Component */
+.project-table {
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1vh 1vw;
+	max-width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+	width: 95%;
+	color: var(--primary);
+}
+
+td,
+th {
+	font-family: 'Rubik', sans-serif;
+	border: 1px solid var(--text);
+	text-align: left;
+	padding: 8px;
+	color: var(--secondary);
+}
+
+tr a {
+	color: var(--primary);
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+/* Style for articles Component */
+
+.articles {
+	display: none;
+	align-self: flex-start;
+	background-color: var(--text);
+	width: 60vw;
+	height: 100vh;
+}
+
+/* Style for other elements  */
+
+#close {
+	cursor: pointer;
+}
+
+#close:hover {
+	color: var(--secondary);
+}
+
+.btn {
+	background-color: var(--success);
+	border-radius: 11px;
+	box-shadow: 0 2px #388e3c;
+	padding: 1vh 1vw;
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	transition: all ease-in-out 0.5s;
+}
+
+.btn:hover {
+	background-color: var(--secondary);
+	border-radius: 11px;
+	box-shadow: 0 0px #424242;
+	transition: all ease-in 0.5s;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#back {
+	display: none;
+	cursor: pointer;
+	color: var(--error);
+	
+}
+
+#back:hover {
+	color: var(--success);
+	transition: all ease-in 0.5s;
+}
+
+#viewAll {
+	display: inline;
+	cursor: pointer;
+	color: var(--error);
+	
+}
+
+#viewAll:hover {
+	color: var(--success);
+	transition: all ease-in 0.5s;
+}
+
+#footer {
+	position: absolute;
+	bottom: 1vh;
+	left: 1vw;
+}
+
+#footer > a {
+	color: var(--text);
+	transition: all ease-in 0.3s;
+}
+
+#footer > a:hover {
+	color: var(--error);
+	transition: all ease-in 0.3s;
+}
+
+/* Animations */
+@keyframes open-box {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes close-box {
+	0% {
+		width: 60vw;
+		height: 100vh;
+	}
+
+	100% {
+		width: 0vw;
+		height: 100vh;
+	}
+}
+/* Media queries */
+
+@media (max-width: 1455px) {
+	.technologies,
+	.content-links,
+	.project-stack,
+	.project-links {
+		font-size: 1.3rem;
+	}
+
+	#subtitle,
+	.project-text {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 1225px) {
+	.technologies,
+	.content-links,
+	.project-stack,
+	.project-links {
+		font-size: 1rem;
+	}
+
+	#name {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 1085px) {
+	.technologies,
+	.content-links,
+	.project-stack,
+	.project-links {
+		font-size: 0.9rem;
+	}
+
+	#name {
+		font-size: 1rem;
+	}
+
+	#subtitle,
+	.project-text {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 795px) {
+	.preview img {
+		height: fill-content;
+	}
+
+	.project-text {
+		display: none;
+	}
+	#projects-footer {
+		margin: 0;
+	}
+	.project-stack {
+		font-size: 2rem;
+	}
+
+	.project-links {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.project-content {
+		width: 100vw;
+	}
+
+	.project-card {
+		height: 20vh;
+	}
+	.project-stack {
+		font-size: 1.5rem;
+	}
+
+	.project-links {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 350px) {
+	.profile-card {
+		width: 40vw;
+	}
+	#subtitle {
+		text-align: center;
+	}
+	.project-stack {
+		font-size: 1rem;
+	}
+
+	.project-links {
+		font-size: 1rem;
+	}
+}
